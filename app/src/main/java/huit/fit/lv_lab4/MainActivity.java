@@ -22,9 +22,13 @@ public class MainActivity extends AppCompatActivity {
     Button btnThem;
     TextView tvKq;
     ListView lvTen;
+    ListView lvFlags;
 
     ArrayList<String> dsTen=new ArrayList<>();
     ArrayAdapter<String> adapter;
+    //-----------------
+    ArrayList<Flag> lsFlags = new ArrayList<>();
+    CustomAdapterFlag customAdapterFlag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<>(MainActivity.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,dsTen);
         lvTen.setAdapter(adapter);
         //-------------
+        //Xử lý cho customLV
+        lsFlags.add(new Flag(R.drawable.france,"Pháp"));
+        lsFlags.add(new Flag(R.drawable.italy,"Ý"));
+        lsFlags.add(new Flag(R.drawable.lao,"Lào"));
+
+        customAdapterFlag = new CustomAdapterFlag(MainActivity.this,R.layout.layout_item_flag,lsFlags);
+        lvFlags.setAdapter(customAdapterFlag);
+
+        //--------------------------
         addEvent();
 
     }
@@ -47,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         btnThem=(Button) findViewById(R.id.btnThem);
         tvKq=(TextView) findViewById(R.id.tvKq);
         lvTen = (ListView) findViewById(R.id.lvTen);
-
+        lvFlags = (ListView) findViewById(R.id.cusLvFlag);
     }
     void addEvent()
     {
