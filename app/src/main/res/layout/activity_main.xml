@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="13pt"
+        android:textColor="#BF360C"
+        android:inputType="textPersonName"
+        android:hint="Họ tên: " />
+
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:layout_height="wrap_content"
+        android:text="Thêm Tên" />
+
+    <TextView
+        android:id="@+id/tvKq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#89C6C6"
+        android:textSize="13pt"
+        android:text="Giá trị item chọn là: " />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/lvTen"
+        />
+</LinearLayout>
