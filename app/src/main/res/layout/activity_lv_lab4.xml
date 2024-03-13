@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LV_Lab4">
+
+    <EditText
+        android:id="@+id/edtTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="13pt"
+        android:inputType="textPersonName"
+        android:hint="Họ tên" />
+
+    <Button
+        android:id="@+id/btnThemTen"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Thêm tên" />
+
+    <TextView
+        android:id="@+id/tvKq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14pt"
+        android:textColor="@color/teal_700"
+        android:text="Tên được chọn là: " />
+
+    <ListView
+        android:id="@+id/lvHoTen"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" >
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/lvQG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
