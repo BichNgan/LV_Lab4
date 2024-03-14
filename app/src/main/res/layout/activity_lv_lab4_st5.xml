@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LV_Lab4_ST5">
+
+    <EditText
+        android:id="@+id/edtHten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="13pt"
+        android:inputType="textPersonName"
+        android:hint="tên" />
+
+    <Button
+        android:id="@+id/btnThemHten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Tên" />
+
+    <TextView
+        android:id="@+id/tvHten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <ListView
+        android:id="@+id/lvHienThiTen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</LinearLayout>
