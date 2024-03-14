@@ -22,9 +22,15 @@ public class LV_Lab4_ST5 extends AppCompatActivity {
     Button btnThemTen;
     TextView tvKq;
     ListView lvTen;
+    ListView lvNation;
     //------------------------------
     ArrayList<String>dsHten= new ArrayList<>();
     ArrayAdapter adapter;
+    //------------------------
+    ArrayList<Nation> listNation = new ArrayList<>();
+    CustomAdapterNation customAdapterNation;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +42,13 @@ public class LV_Lab4_ST5 extends AppCompatActivity {
         dsHten.add("Vu");
         adapter=new ArrayAdapter(LV_Lab4_ST5.this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,dsHten);
         lvTen.setAdapter(adapter);
+        //---------------------
+        //Hiển thị CustomLV
+        listNation.add(new Nation(R.drawable.lao,"Lào"));
+        listNation.add(new Nation(R.drawable.france,"Pháp"));
+        listNation.add(new Nation(R.drawable.italy,"Ý"));
+        customAdapterNation=new CustomAdapterNation(LV_Lab4_ST5.this,R.layout.layout_item_nation,listNation);
+        lvNation.setAdapter(customAdapterNation);
         //--------------------
        addEvent();
 
@@ -47,6 +60,7 @@ public class LV_Lab4_ST5 extends AppCompatActivity {
         btnThemTen=(Button) findViewById(R.id.btnThemHten);
         tvKq = (TextView) findViewById(R.id.tvHten);
         lvTen=(ListView) findViewById(R.id.lvHienThiTen);
+        lvNation=(ListView) findViewById(R.id.lvNation);
 
     }
     void addEvent()

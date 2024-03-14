@@ -31,5 +31,13 @@
     <ListView
         android:id="@+id/lvHienThiTen"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="200dp" >
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/lvNation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"/>
 </LinearLayout>
